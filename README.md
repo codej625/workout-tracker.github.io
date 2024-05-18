@@ -10,24 +10,21 @@
 
 <br/><br/><br/>
 
-* 개발 정리
+* 개발 구상(...ing)
 ```
 웹을 기반으로 하는 웹 뷰로 앱을 제작 예정이다.
 웹뷰를 테스트 하기 위해선 호스팅중인 웹서비스가 필요하기 떄문에,
-GitHub Pages를 사용하여 Web Service를 운영 예정이다.
+GitHub Pages의 기능인 정적 html파일을 호스팅하여 Web Service를 운영 예정이다.
 ```
 
 <br/><br/><br/>
 
-* 개발 스택
-
-<br />
-
+* Stack
 1. Front-end
 ```
 - Jvascript -> React
 - Web Publishing(HTML, CSS)
-- Web(WAS) Server -> Node.js(Express)
+- Web Server -> Node.js(Express)
 ```
 
 <br />
@@ -36,7 +33,7 @@ GitHub Pages를 사용하여 Web Service를 운영 예정이다.
 ```
 - Java -> Spring Boot
 - DB -> PostgreSQL -> JPA(Java Persistence API)
-- Web(WAS) Server -> Apache Tomcat
+- WAS -> Apache Tomcat
 ```
 
 <br />
@@ -47,15 +44,22 @@ GitHub Pages를 사용하여 Web Service를 운영 예정이다.
 
 DB에 접근하는 백엔드 서버는 하나로 충분하기 떄문에 프론트엔드(Scale out) 서버와 하나의 백엔드서버, 데이터베이스 서버로 구성될 예정이다.
 
-* 테스트 시 운영 순서
-Client -> Mobile App(ios, android) -> GitHub Pages -> 백엔드 서버 -> 데이터베이스 서버
+* 테스트 환경
+Client -> Mobile App(ios, android) -> GitHub Pages -> 개인 서버(WAS - Database Server)
 
-* AWS 사용 운영 시 작동 순서
-Client -> Mobile App(ios, android) -> ELB -> EC2 - 프론트엔드 서버(Scale out) -> ELB -> EC2 - 백엔드 서버 -> RDS
+* AWS 사용 운영 환경
+Client -> Mobile App(ios, android) -> ELB -> EC2(WEB) -> ELB -> EC2(WAS) - RDS(Cluster)
 ```
 <br /><br /><br />
 
-3. Domain
+* Tool
+```
+IntelliJ / VSC / pgAdmin 4 / Terminal
+```
+
+<br /><br /><br />
+
+* Domain name
 ```
 도메인 구입 사이트 -> 가비아(예정)
 도메인 이름 -> 미정
